@@ -1,0 +1,9 @@
+﻿<Application x:Class="Ablesen.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Ablesen.Views"
+             StartupUri="Views/Ablesung.xaml">
+    <Application.Resources>
+
+    </Application.Resources>
+</Application>
