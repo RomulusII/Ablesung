@@ -47,7 +47,8 @@
                 <Label Grid.Row="7" Grid.Column="1" Content="{Binding AblesungsBlatt.Stammdaten.Zeitraum}"/>
 
             </Grid>
-            <ListView Margin="10" ItemsSource="{Binding Path=ZaehlerList}" SelectedItem="{Binding Path=SelectedZaehler}">
+            <ListView Margin="10" ItemsSource="{Binding Path=ZaehlerList}" > <!--SelectedItem="{Binding Path=SelectedZaehler}">-->
+
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Width="140" Header="POS"
@@ -57,7 +58,29 @@
                         <GridViewColumn Width="140" Header="Art"
                                         DisplayMemberBinding="{Binding Zaehler.Art}" />
                         <GridViewColumn Width="140">
-                            <!--<ContentControl Content="{Binding Za}" />-->
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Canvas Name="theRootCanvas">
+                                        <Border
+                                            Background="White"
+                                            BorderBrush="Black"
+                                            BorderThickness="2"
+                                            Height="300"
+                                            Width="300"
+                                            Canvas.Top="10"
+                                            Canvas.Left="10">
+                                            <InkCanvas Strokes="{Binding Zaehler.Signature}">
+                                            </InkCanvas>
+                                        </Border>
+                                        <TextBox Height="25"
+                                                 Width="225"
+                                                 Canvas.Top="325"
+                                                 Canvas.Left="10" Text ="{Binding Zaehler.Eingabe}"></TextBox>
+
+                                        <Button x:Name="btnClear2" Content="Clear Canvas" Canvas.Left="10" Canvas.Top="397" Width="75" Command="{Binding Zaehler.ClearCommand}"/>
+                                    </Canvas>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                     </GridView>
                 </ListView.View>

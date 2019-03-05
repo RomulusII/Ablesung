@@ -71,6 +71,7 @@
     <Compile Include="Model\AblesungsBlatt.cs" />
     <Compile Include="Model\GeraetBase.cs" />
     <Compile Include="ViewModels\AblesungsblattViewModel.cs" />
+    <Compile Include="ViewModels\AblesungViewModelBase.cs" />
     <Compile Include="Views\Ablesung.xaml.cs">
       <DependentUpon>Ablesung.xaml</DependentUpon>
     </Compile>

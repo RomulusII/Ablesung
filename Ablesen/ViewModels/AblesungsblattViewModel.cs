@@ -39,6 +39,8 @@ namespace Ablesen.ViewModels
             {
                 new ZaehlerViewModel( new Zaehler(1, "HVE", "BAD", "0900" , 1763)),
                 new ZaehlerViewModel( new Zaehler(1, "WWZ", "KÜCHE", "4283" , 0.720)),
+                new ZaehlerViewModel( new Zaehler(1, "GEG", "ERE", "2342" , 0.7320)),
+                new ZaehlerViewModel( new Zaehler(1, "WWZ", "GEG", "123" , 0.720)),
 
             };
 
